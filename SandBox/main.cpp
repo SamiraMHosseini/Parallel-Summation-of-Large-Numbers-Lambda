@@ -37,7 +37,7 @@ int main()
 	ULLONG  start = 0;
 	ULLONG  end = 0;
 	std::vector<std::thread> workers;
-	std::vector<ULLONG> vectSum(number_of_threads);
+	std::vector<ULLONG> vectSum;
 
 	//Assigning a task to a specific thread
 
@@ -53,10 +53,10 @@ int main()
 				ULLONG sum{ 0 };
 				for (ULLONG i = start_; i <= end_; ++i)
 				{
-					
+
 					sum += i;
 				}
-				
+
 				vectSum.push_back(sum);
 			}
 		, start, end);
@@ -75,12 +75,12 @@ int main()
 				{
 					sum += i;
 				}
-				
+
 				vectSum.push_back(sum);
 			}
 
 		);
-		
+
 
 	}
 	std::for_each(workers.begin(), workers.end(),
