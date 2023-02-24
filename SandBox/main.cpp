@@ -38,7 +38,7 @@ int main()
 	ULLONG  end = 0;
 	std::vector<std::thread> workers;
 	std::vector<ULLONG> vectSum;
-
+	vectSum.reserve(number_of_threads);
 	//Assigning a task to a specific thread
 
 	for (; index < NUM; ++index, counter += step)
