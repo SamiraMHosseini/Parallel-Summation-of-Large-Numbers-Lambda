@@ -78,7 +78,6 @@ int main()
 				{
 					sum += i;
 				}
-				//std::cout << " sum " << sum << '\n';
 				vectSum.push_back(sum);
 			}
 
